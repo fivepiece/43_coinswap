@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# C1 :
+
+spk_C1_scr=( $( spk_pay2pkhash $(key_pub2addr ${C1_pub}) ) )
+spk_C1_hex="$( script_serialize "${spk_C1_scr[*]}" )"

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# (H(X) && A5) || (L1 && C5) :
+
+L1_C5="12"
+spk_HXA5_L1C5_scr=( IF HASH160 @${AX_h160} EQUALVERIFY @${A5_pub} ELSE ${L1_C5} CHECKSEQUENCEVERIFY DROP @${C5_pub} ENDIF CHECKSIG )
+spk_HXA5_L1C5_hex="$( script_serialize "${spk_HXA5_L1C5_scr[*]}" )"

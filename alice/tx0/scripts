@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# A1 && C0 :
+
+spk_2_A1C0_2_scr=( $(spk_pay2mofn 2 "${A1_pub} ${C0_pub}") )
+spk_2_A1C0_2_hex="$( script_serialize "${spk_2_A1C0_2_scr[*]}" )"

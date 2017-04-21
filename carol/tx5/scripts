@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# A4 :
+
+spk_A4_scr=( $( spk_pay2pkhash $(key_pub2addr ${A4_pub}) ) )
+spk_A4_hex="$( script_serialize "${spk_A4_scr[*]}" )"
