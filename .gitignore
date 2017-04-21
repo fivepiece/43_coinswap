@@ -1,14 +1,14 @@
 # swap
-**[._]*.s[a-v][a-z]
-**[._]*.sw[a-p]
-**[._]s[a-v][a-z]
-**[._]sw[a-p]
+**/[._]*.s[a-v][a-z]
+**/[._]*.sw[a-p]
+**/[._]s[a-v][a-z]
+**/[._]sw[a-p]
 # session
-Session.vim
+**/Session.vim
 # temporary
-.netrwhist
-*~
+**/.netrwhist
+**/*~
 # auto-generated tag files
-tags
+**/tags
 # proj
 **/*.json
