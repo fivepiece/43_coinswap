@@ -2,6 +2,7 @@
 
 # (H(X) && C2) || (L0 && A2) :
 
+LOCK_OP_TX2="CHECKSEQUENCEVERIFY"
 L0_A2="24"
-spk_HXC2_L0A2_scr=( IF HASH160 @${AX_h160} EQUALVERIFY @${C2_pub} ELSE ${L0_A2} CHECKSEQUENCEVERIFY DROP @${A2_pub} ENDIF CHECKSIG )
+spk_HXC2_L0A2_scr=( IF HASH160 @${AX_h160} EQUALVERIFY @${C2_pub} ELSE ${L0_A2} ${LOCK_OP_TX2} DROP @${A2_pub} ENDIF CHECKSIG )
 spk_HXC2_L0A2_hex="$( script_serialize "${spk_HXC2_L0A2_scr[*]}" )"

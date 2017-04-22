@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set_network_versions mastcoin
+source $HOME/Documents/testnet-keys/41_tests/run_test.sh
+source $HOME/Documents/testnet-keys/42_bighash/signthis.sh
+
 Alice_home="$HOME/Documents/testnet-keys/43_coinswap/alice"
 Carol_home="$HOME/Documents/testnet-keys/43_coinswap/carol"
 
