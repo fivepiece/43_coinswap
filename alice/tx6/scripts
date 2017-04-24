@@ -1,2 +1,11 @@
 #!/bin/bash
 
+# [ ! (H(X) && C2) || (L0 && A2) ] -> [ A4 ] :
+
+TX6_seq="$((2**32-1))"
+TX6_nlt="0"
+if [[ ${LOCK_OP_TX2} == CHECKSEQUENCEVERIFY ]]; then
+    TX6_seq="${L0_A2}"
+elif [[ ${LOCK_OP_TX2} == CHECKLOCKTIMEVERIFY ]]; then
+    TX6_nlt="${L0_A2}"
+fi

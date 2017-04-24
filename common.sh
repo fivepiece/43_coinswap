@@ -12,10 +12,10 @@ source ${Alice_home}/res/secrets
 
 source ${Carol_home}/res/keys
 
-for i in 0 2 4 6; do
+for i in 0 2 4 6 8; do
     source ${Alice_home}/tx${i}/scripts
 done
 
-for i in 1 3 5 7; do
+for i in 1 3 5 7 9; do
     source ${Carol_home}/tx${i}/scripts
 done

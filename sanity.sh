@@ -44,8 +44,8 @@ credits=( \
 
 for (( i=0; i<${#childrn[@]}; i++ )); do
     thischld="${childrn[$i]}"
-    redeem="$( mastcoin-cli signrawtransaction "${childrn[$i]}" "$(cat ${credits[${thischld}]} )" | grep -o 'true' )"
-    [[ ${redeem} == true ]] && echo "${credits[${thischld}]##*/} -> TX$i"
+    redeem="$( mastcoin-cli signrawtransaction "${childrn[$i]}" "$(cat ${credits[${thischld}]} )" | grep -o "true\|Locktime" )"
+    [[ ${redeem} =~ true|Locktime ]] && echo "${credits[${thischld}]##*/} -> TX$i"
     parent="$( partxid ${childrn[$i]} 2>/dev/null )"
     [[ ${branches[${childrn[$i]}]} == ${parent} ]] && echo "${txmap[$i]} -> $(hash256 ${childrn[$i]} | revbytes)"
 done
